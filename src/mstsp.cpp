@@ -19,7 +19,7 @@ void Mstsp::process_data(){
     Vector2d depot_pos(0,0);
     UavVector uavs;
     for(auto i = 0u; i < n_agents; i++) {
-        Uav_Agent agent(5, 1, 2.5, 20, 2, max_flight_time, depot_pos, segments);
+        Uav_Agent agent(v_max_global, v_insp_global, a_max_global, 999, yaw_max_global, max_flight_time, depot_pos, segments);
         uavs.push_back(agent);
     }
     if (solver.compare("grasp") == 0) {

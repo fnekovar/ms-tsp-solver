@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.4)
-project(msctsp)
+project(mstsp)
 
 set(CMAKE_MODULE_PATH               "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 set(CMAKE_CXX_FLAGS                 "${CMAKE_CXX_FLAGS} -std=c++17 -DIL_STD -m64 -Werror")
@@ -8,7 +8,7 @@ set(CMAKE_CXX_FLAGS_RELEASE         "${CMAKE_CXX_FLAGS_RELEASE} -DNDEBUG -O3 -fl
 set(CMAKE_INCLUDE_SYSTEM_FLAG_CXX   "-isystem ")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  "${CMAKE_CURRENT_SOURCE_DIR}/build")
 set(LINKER_OPTIONS                  -flto -Wl,--no-as-needed)
-set(CPLEX_ROOT_DIR                 "/opt/ibm/ILOG/CPLEX_Studio1210")
+set(CPLEX_ROOT_DIR                 "/opt/ibm/ILOG/CPLEX_Studio201")
 
 if(CMAKE_SYSTEM_NAME STREQUAL Darwin)
     set(CMAKE_CXX_FLAGS_DEBUG       "${CMAKE_CXX_FLAGS_DEBUG} -save-temps=obj")
@@ -38,13 +38,16 @@ set(SOURCE_FILES
         src/mstsp.cpp
         src/mstsp.h)
 
-add_executable(         msctsp ${SOURCE_FILES})
-target_link_libraries(  msctsp PRIVATE ${CPLEX_LIBRARIES})
-target_link_libraries(  msctsp PRIVATE dl)
-target_link_libraries(  msctsp PRIVATE config++)
-target_link_libraries(  msctsp PRIVATE stdc++fs)
-target_link_libraries ( msctsp PRIVATE Eigen3::Eigen)
+add_executable(         mstsp ${SOURCE_FILES})
+target_link_libraries(  mstsp PRIVATE ${CPLEX_LIBRARIES})
+target_link_libraries(  mstsp PRIVATE dl)
+target_link_libraries(  mstsp PRIVATE config++)
+target_link_libraries(  mstsp PRIVATE stdc++fs)
+target_link_libraries ( mstsp PRIVATE Eigen3::Eigen)
 
 add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
         ${CMAKE_SOURCE_DIR}/config.cfg $<TARGET_FILE_DIR:${PROJECT_NAME}>)
+add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+        ${CMAKE_SOURCE_DIR}/config_grasp.cfg $<TARGET_FILE_DIR:${PROJECT_NAME}>)

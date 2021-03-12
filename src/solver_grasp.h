@@ -17,6 +17,7 @@
 #include <list>
 #include <algorithm>
 #include <ctime>
+#include <libconfig.h++>
 
     class Solver_Grasp {
         UavVector agents;
@@ -28,20 +29,22 @@
         double g4Score;
         double R_T_iterator;
         int sizeRCL;
-        const double p1 = 1; // best group solution (p for prize)
-        const double p2 = 5; // best tabu solution
-        //const int R_T = 5;
-        const int w0 = 5;
-
-        void targets_from_segments(vector<vector<Vector2d>> segments);
+        double p1 = 1; // best group solution (p for prize)
+        double p2 = 5; // best tabu solution
+        int R_T = 5;
+        double w0 = 5;
 
     public:
         Solver_Grasp(const UavVector agents, const vector<vector<Vector2d>> segments)
                 : agents{agents} {
             targets_from_segments(segments);
+            load_config();
         }
         TargetSetVectorVector greedy_random();
         Solution solve();
+private:
+        void load_config();
+        void targets_from_segments(vector<vector<Vector2d>> segments);
         TargetSetVectorVector getTSSolution(TargetSetVectorVector& prevSol);
         void getG1Solution(TargetSetVectorVector& prevSol);
         void getG2Solution(TargetSetVectorVector& prevSol);

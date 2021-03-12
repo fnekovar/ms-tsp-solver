@@ -4,6 +4,17 @@
 
 #include "solver_grasp.h"
 
+    void Solver_Grasp::load_config() {
+
+        libconfig::Config cfg;
+        cfg.readFile("config_grasp.cfg");
+        cfg.lookupValue("w0", w0);
+        cfg.lookupValue("p1", p1);
+        cfg.lookupValue("p2", p2);
+        cfg.lookupValue("R_T", R_T);
+
+}
+
     void Solver_Grasp::targets_from_segments(vector<vector<Vector2d>> lines) {
         int cost_index = 2;
         for (auto line : lines)
@@ -114,7 +125,6 @@
         TargetSetVectorVector bestNeigborhoodSolution = prevSol;
         tabuList.push_back(prevSol);
 
-        int R_T = 20;
         R_T_iterator = R_T;
 
         bool stop_crit = false;

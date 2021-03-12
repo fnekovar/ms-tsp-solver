@@ -26,6 +26,10 @@ private:
     int max_flight_time;
     int grasp_runs;
     int max_ilp_time;
+    double v_max_global;
+    double v_insp_global;
+    double a_max_global;
+    double yaw_max_global;
     string problem_file;
     string solver;
     Solution solution;
@@ -39,12 +43,16 @@ public:
         cfg.readFile(config_file);
         cfg.lookupValue("problem_format", problem_format);
         cfg.lookupValue("solver", solver);
-        cfg.lookupValue("m_agents", n_agents);
+        cfg.lookupValue("n_agents", n_agents);
         cfg.lookupValue("max_distance", max_load_distance);
         cfg.lookupValue("max_cost", max_flight_time);
         cfg.lookupValue("problem_file", problem_file);
         cfg.lookupValue("grasp_iterations", grasp_runs);
         cfg.lookupValue("max_ilp_time", max_ilp_time);
+        cfg.lookupValue("yaw_max", yaw_max_global);
+        cfg.lookupValue("a_max", a_max_global);
+        cfg.lookupValue("v_max", v_max_global);
+        cfg.lookupValue("v_insp", v_insp_global);
     }
     int run();
 private:
