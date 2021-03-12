@@ -1,3 +1,0 @@
-/home/fnekovar/git/ms-tsp-solver/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/fnekovar/git/ms-tsp-solver/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/fnekovar/git/ms-tsp-solver/cmake-build-debug/CMakeFiles/msctsp.dir
