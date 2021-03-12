@@ -1,7 +1,7 @@
 # ms-tsp-solver
 
-Code repository for the paper:
-ulti-tour Set Traveling Salesman Problem in Planning Power Transmission Line Inspection.
+Code repository for the paper:\
+Multi-tour Set Traveling Salesman Problem in Planning Power Transmission Line Inspection.
 
 Solver for multi-tour set TSP in power line inspection.
 Executable argument should be path to the configuration file.
