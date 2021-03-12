@@ -1,0 +1,32 @@
+# This file describes the (x,y,z) points of the recharge land stations, regular land stations and the electric towers (or pylons) of
+# the complete electric graph, being the three columns the (x,y,z) coordinates and the rows different elements.
+# "pylons_position_geo" is just as "pylons_position" but in geographic coordinates (latitude, longitude, altitude).
+# The vector of vectors "connection_indexes" must be of the same size of "pylons_position" and represents the wire connections among
+# electric towers. ATTENTION: indexes start at 1, so you may want to rest 1 at parsing to start by 0 (C++ or Python).
+
+recharge_land_stations: "0 0 0;
+0 10 0;"
+
+regular_land_stations: "-10 0 0;
+10 0 0;"
+
+pylons_position: "100 0 0;
+200 0 0;
+300 0 0;
+100 50 0;
+200 50 0;
+300 50 0;
+-100 -50 0;
+-200 -50 0;
+-300 -50 0;"
+
+connections_indexes: "2;
+1 3;
+2;
+5;
+4 6;
+5;
+8;
+7 9;
+8;"
+

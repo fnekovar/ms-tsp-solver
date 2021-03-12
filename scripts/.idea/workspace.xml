@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ad16a1a-3a0b-4e2b-a82b-5825701a3906" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1iVbxMNBWVRxtBngnQEnV4LeNqC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../multi_set_constrained_tsp_ilp/scripts/result_process.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.nechr_to_atlas">
+    <configuration name="show_table" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <output-path>$USER_HOME$</output-path>
+        <auxil-path>$USER_HOME$</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config />
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="nechr_to_atlas" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="scripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nechr_to_atlas.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="result_process" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="scripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/result_process.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="traj_gen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="scripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/traj_gen.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="visualize_ale_debilne" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="scripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_ale_debilne.py" />
+      <option name="PARAMETERS" value="../build/atlas.csv" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="visualize_solution" type="PythonConfigurationType" factoryName="Python">
+      <module name="scripts" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize_solution.py" />
+      <option name="PARAMETERS" value="../build/grasp_3_5000_25000" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_data.sh" type="ShConfigurationType" temporary="true">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/get_data.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="LaTeX.show_table" />
+      <item itemvalue="Python.visualize_solution" />
+      <item itemvalue="Python.nechr_to_atlas" />
+      <item itemvalue="Python.result_process" />
+      <item itemvalue="Python.visualize_ale_debilne" />
+      <item itemvalue="Python.traj_gen" />
+      <item itemvalue="Shell Script.get_data.sh" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.result_process" />
+        <item itemvalue="Python.traj_gen" />
+        <item itemvalue="LaTeX.show_table" />
+        <item itemvalue="Python.visualize_ale_debilne" />
+        <item itemvalue="Shell Script.get_data.sh" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ad16a1a-3a0b-4e2b-a82b-5825701a3906" name="Default Changelist" comment="" />
+      <created>1601995951805</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601995951805</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="416" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615474524375">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="416" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615474524375" />
+    <state x="691" y="267" width="528" height="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614210409288">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="691" y="267" width="528" height="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1614210409288" />
+    <state x="716" y="264" key="#xdebugger.evaluate" timestamp="1615477787714">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="716" y="264" key="#xdebugger.evaluate/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615477787714" />
+    <state width="1238" height="485" key="DebuggerActiveHint" timestamp="1615477750414">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1238" height="485" key="DebuggerActiveHint/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615477750414" />
+    <state x="741" y="276" width="428" height="478" key="FileChooserDialogImpl" timestamp="1615473755854">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="741" y="276" width="428" height="478" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615473755854" />
+    <state width="1899" height="291" key="GridCell.Tab.0.bottom" timestamp="1615484769806">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615484769806" />
+    <state width="1899" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1614210584003" />
+    <state width="1899" height="291" key="GridCell.Tab.0.center" timestamp="1615484769806">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="291" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615484769806" />
+    <state width="1899" height="291" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1614210584003" />
+    <state width="1899" height="291" key="GridCell.Tab.0.left" timestamp="1615484769806">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="291" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615484769806" />
+    <state width="1899" height="291" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1614210584002" />
+    <state width="1899" height="291" key="GridCell.Tab.0.right" timestamp="1615484769806">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="291" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615484769806" />
+    <state width="1899" height="291" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1614210584003" />
+    <state width="1899" height="359" key="GridCell.Tab.1.bottom" timestamp="1615484769803">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="359" key="GridCell.Tab.1.bottom/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615484769803" />
+    <state width="1899" height="359" key="GridCell.Tab.1.center" timestamp="1615484769803">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="359" key="GridCell.Tab.1.center/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615484769803" />
+    <state width="1899" height="359" key="GridCell.Tab.1.left" timestamp="1615484769803">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="359" key="GridCell.Tab.1.left/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615484769803" />
+    <state width="1899" height="359" key="GridCell.Tab.1.right" timestamp="1615484769803">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="359" key="GridCell.Tab.1.right/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615484769803" />
+    <state x="2808" y="240" key="SettingsEditor" timestamp="1615474625783">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state x="445" y="131" key="SettingsEditor/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615474547410" />
+    <state x="2808" y="240" key="SettingsEditor/0.0.1920.1080/1920.0.3840.2160@1920.0.3840.2160" timestamp="1615474625783" />
+    <state x="3284" y="800" width="544" height="207" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1615474589479">
+      <screen x="1920" y="0" width="3840" height="2160" />
+    </state>
+    <state x="683" y="411" width="544" height="207" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1080/1920.0.3840.2160@0.0.1920.1080" timestamp="1615474551871" />
+    <state x="3284" y="800" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1080/1920.0.3840.2160@1920.0.3840.2160" timestamp="1615474589479" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/visualize_solution.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/traj_gen.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/nechr_to_atlas.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
