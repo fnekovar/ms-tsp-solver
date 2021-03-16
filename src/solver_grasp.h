@@ -31,7 +31,7 @@
         int sizeRCL;
         double p1 = 1; // best group solution (p for prize)
         double p2 = 5; // best tabu solution
-        int R_T = 5;
+        int R_T = 20;
         double w0 = 5;
 
     public:

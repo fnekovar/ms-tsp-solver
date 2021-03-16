@@ -3,7 +3,7 @@ import sys
 import random
 
 def main():
-    filename = sys.argv[1]
+    filename = '../build/ilp_3_600_3000.csv'
     file_handle = open(filename,'r')
     lines_list = file_handle.readlines();
     lines_list = lines_list[2:]
@@ -17,13 +17,11 @@ def main():
 
     data = []
     for line in lines_list_stripped:
-        data_line = [0,0]
+        data_line = []
         for pair in line.split(", "):
             vals = pair.split()
             data_line.append(float(vals[0]))
             data_line.append(float(vals[1]))
-        data_line.append(0)
-        data_line.append(0)
         data.append(data_line)
 
    #data = [[float(val) for val in line.split(", ")] for line in lines_list_stripped[3:]]
@@ -41,13 +39,21 @@ def main():
             x_coords.append(next(it))
             y_coords.append(next(it))
 
+        segments = int(len(x_coords)/2)
+
         r = random.random()
         b = random.random()
         g = random.random()
         color = next(col_it)
 
         ax.plot(x_coords, y_coords, 'k.')
-        ax.plot(x_coords, y_coords, '-', color=color)
+
+        ax.plot([0,x_coords[0]],[0,y_coords[0]],'--', color=color)
+        for i in range(segments):
+            ax.plot([x_coords[i*2], x_coords[i*2+1]], [y_coords[i*2],y_coords[i*2+1]], '-', color=color)
+        for i in range(segments-1):
+            ax.plot([x_coords[i*2+1], x_coords[i*2+2]], [y_coords[i*2+1],y_coords[i*2+2]], '--', color=color)
+        ax.plot([x_coords[-1],0], [y_coords[-1],0], '--', color=color)
 
         ax.set_ylabel('Lattitude [m]')
         ax.set_xlabel('Longitude [m]')

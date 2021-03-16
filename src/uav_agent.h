@@ -53,6 +53,7 @@ public:
         double timeTraverse = (dist_traverse - distAccTraverse)/v_max;
         double timeInspection = (dist_inspect - distAccInspection)/v_inspection;
         return turnTime1 + timeTraverse + turnTime2 + timeInspection + 2*v_max/a_max + 2*v_inspection/a_max;
+//        return timeTraverse + timeInspection + 2*v_max/a_max + 2*v_inspection/a_max;
     }
 
     double estimateTimeEnd(const vector<Vector2d>& vertices) {
@@ -71,6 +72,7 @@ public:
         double dist_traverse = (depot - origin).norm();
         double timeTraverse = (dist_traverse - distAccTraverse)/v_max;
         return turnTime1 + timeTraverse + 2*v_max/a_max;
+//        return timeTraverse + 2*v_max/a_max;
     }
 
     void generate_cost_matrix_straightline(Vector2d coord_0, vector<vector<Vector2d>> lines) {
@@ -128,10 +130,10 @@ public:
                 vector<Vector2d> vec2 {lines[l][0], lines[l][1], lines[k][1], lines[k][0]}; // 1243
                 vector<Vector2d> vec3 {lines[l][1], lines[l][0], lines[k][0], lines[k][1]}; // 2134
                 vector<Vector2d> vec4 {lines[l][1], lines[l][0], lines[k][1], lines[k][0]}; // 2143
-                vector<Vector2d> vec5 {lines[l][0], lines[l][1], lines[k][0], lines[k][1]}; // 3412
-                vector<Vector2d> vec6 {lines[l][0], lines[l][1], lines[k][1], lines[k][0]}; // 3421
-                vector<Vector2d> vec7 {lines[l][1], lines[l][0], lines[k][0], lines[k][1]}; // 4312
-                vector<Vector2d> vec8 {lines[l][1], lines[l][0], lines[k][1], lines[k][0]}; // 4321
+                vector<Vector2d> vec5 {lines[k][0], lines[k][1], lines[l][0], lines[l][1]}; // 3412
+                vector<Vector2d> vec6 {lines[k][0], lines[k][1], lines[l][1], lines[l][0]}; // 3421
+                vector<Vector2d> vec7 {lines[k][1], lines[k][0], lines[l][0], lines[l][1]}; // 4312
+                vector<Vector2d> vec8 {lines[k][1], lines[k][0], lines[l][1], lines[l][0]}; // 4321
                 auto dist1 = estimateTimeLines(vec1);
                 auto dist2 = estimateTimeLines(vec2);
                 auto dist3 = estimateTimeLines(vec3);

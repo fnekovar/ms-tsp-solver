@@ -66,6 +66,7 @@ void Mstsp::read_yaml_data() {
     cfg_graph.lookupValue("connections_indexes", pylon_connections);
 
     vector<Vector2d> pylons;
+    Vector2d depot(0,0);
 
     stringstream pylons_stream(pylon_positions);
     string line;
@@ -97,7 +98,9 @@ void Mstsp::read_yaml_data() {
                 vector<Vector2d> segment;
                 segment.push_back(pylons.at(i));
                 segment.push_back(pylons.at(j));
-                segments.push_back(segment);
+                if((pylons.at(i)-depot).norm() < max_load_distance and (pylons.at(j)-depot).norm() < max_load_distance) {
+                    segments.push_back(segment);
+                }
             }
         }
     }
