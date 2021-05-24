@@ -19,7 +19,17 @@
 #include <ctime>
 #include <libconfig.h++>
 
-    class Solver_Grasp {
+
+class TopoNode {
+public:
+    TopoNode(int index, int parent, double cost) {this->index = index; this->parent = parent; this->cost = cost;};
+    TopoNode(){};
+    int index;
+    int parent;
+    double cost;
+};
+
+class Solver_Grasp {
         UavVector agents;
         TargetSetVector targets;
         TargetSetVectorVector finalSolution;
@@ -42,6 +52,8 @@
         }
         TargetSetVectorVector greedy_random();
         Solution solve();
+        Solution solve_gr();
+        TargetSetVectorVector optimize_directions(TargetSetVectorVector solution);
 private:
         void load_config();
         void targets_from_segments(vector<vector<Vector2d>> segments);

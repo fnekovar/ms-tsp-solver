@@ -52,6 +52,11 @@ void Mstsp::process_data(){
         solution = solver_ilp.solve();
         string result_filename = "both_"+ to_string(n_agents)+"_"+to_string(max_load_distance)+"_"+to_string(max_flight_time)+".csv";
         write_csv(result_filename, solution);
+    }else if (solver.compare("gr") == 0){
+        Solver_Grasp solver_grasp(uavs, segments);
+        solution = solver_grasp.solve_gr();
+        string result_filename = "gr_"+ to_string(n_agents)+"_"+to_string(max_load_distance)+"_"+to_string(max_flight_time)+".csv";
+        write_csv(result_filename, solution);
     }
 }
 

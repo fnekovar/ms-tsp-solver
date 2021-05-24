@@ -24,7 +24,61 @@
             }
     }
 
-    TargetSetVectorVector Solver_Grasp::greedy_random() {
+
+TargetSetVectorVector Solver_Grasp::optimize_directions(TargetSetVectorVector solution){
+    TargetSetVectorVector sol_best;
+    for (TargetSetVector route : solution){
+        std::cout << "Cost before opt " << get_path_cost(route,0) << std::endl;
+        TargetSetVector route_best;
+        const std::vector<std::vector<double>> &cost_matrix = agents.at(0).cost_matrix;
+        std::vector<int> indices;
+        std::vector<TopoNode> nodes;
+        for (TargetSet set : route){
+            indices.push_back(set.index);
+        }
+        double cost_0 = cost_matrix[0][indices[0]];
+        double cost_1 = cost_matrix[0][indices[0]+1];
+        double cost_0_0, cost_0_1, cost_1_0, cost_1_1;
+        nodes.push_back(TopoNode(indices[0],-1,cost_0));
+        nodes.push_back(TopoNode(indices[0]+1,-1,cost_1));
+        for (int i = 0; i < indices.size()-1; i++){
+            cost_0_0 = nodes[i*2].cost + cost_matrix[indices[i]][indices[i+1]];
+            cost_1_0 = nodes[i*2+1].cost + cost_matrix[indices[i]+1][indices[i+1]];
+            cost_0_1 = nodes[i*2].cost + cost_matrix[indices[i]][indices[i+1]+1];
+            cost_1_1 = nodes[i*2+1].cost + cost_matrix[indices[i]+1][indices[i+1]+1];
+            if (cost_0_0 < cost_1_0) {
+                nodes.push_back(TopoNode(indices[i+1],i*2, cost_0_0));
+            }else{
+                nodes.push_back(TopoNode(indices[i+1],i*2+1, cost_1_0));
+            }
+            if (cost_0_1 < cost_1_1) {
+                nodes.push_back(TopoNode(indices[i+1]+1,i*2, cost_0_1));
+            }else{
+                nodes.push_back(TopoNode(indices[i+1]+1,i*2+1, cost_1_1));
+            }
+        }
+        cost_0 = nodes[(indices.size()-1)*2].cost + cost_matrix[indices[indices.size()-1]][1];
+        cost_1 = nodes[(indices.size()-1)*2+1].cost + cost_matrix[indices[indices.size()-1]+1][1];
+        TopoNode currentNode;
+        if (cost_0 < cost_1) {
+            currentNode = nodes[(indices.size()-1)*2];
+        }else{
+            currentNode = nodes[(indices.size()-1)*2+1];
+        }
+        route_best.push_back(TargetSet((currentNode.index>>1)<<1,currentNode.index%2));
+        //currentNode = nodes[currentNode.parent];
+        while (currentNode.parent >= 0) {
+            currentNode = nodes[currentNode.parent];
+            route_best.push_back(TargetSet((currentNode.index>>1)<<1,currentNode.index%2));
+        }
+        std::reverse(route_best.begin(), route_best.end());
+        std::cout << "Cost after opt " << get_path_cost(route_best,0) << std::endl;
+        sol_best.push_back(route_best);
+    }
+    return sol_best;
+}
+
+TargetSetVectorVector Solver_Grasp::greedy_random() {
 
         int step = 1;
         double cost;
@@ -85,6 +139,7 @@
         bool validSolution = true;
 
         currentSolution = getTSSolution(currentSolution);
+        currentSolution = optimize_directions(currentSolution);
 
         std::clock_t c_end = std::clock();
 
@@ -103,12 +158,46 @@
                 solution.routes.push_back(route_indices);
             }
         }
+
         return solution;
 
     }
 
-    TargetSetVectorVector Solver_Grasp::getTSSolution(TargetSetVectorVector &prevSol) {
-        int totalScore;
+
+
+Solution Solver_Grasp::solve_gr() {
+
+    std::clock_t c_start = std::clock();
+    std::srand(std::time(nullptr));
+    Solution solution;
+
+    TargetSetVectorVector currentSolution = greedy_random();
+
+    bool validSolution = true;
+
+    std::clock_t c_end = std::clock();
+
+    solution.solution_cost = get_solution_cost(currentSolution);
+
+    double time_elapsed = 1.0 * (c_end-c_start) / CLOCKS_PER_SEC;
+    if (validSolution) {
+        solution.time_to_solve = time_elapsed;
+        for (auto route : currentSolution) {
+            std::vector<int> route_indices;
+            route_indices.push_back(0);
+            for (auto segment : route) {
+                route_indices.push_back(segment.cost_index());
+            }
+            route_indices.push_back(1);
+            solution.routes.push_back(route_indices);
+        }
+    }
+    return solution;
+
+}
+
+TargetSetVectorVector Solver_Grasp::getTSSolution(TargetSetVectorVector &prevSol) {
+    int totalScore;
         int random;
 
         int nodes = 0;
